@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Exercise</title>
+</head>
+<body>
+  
+  <button class="js-btn">9a</button>
+
+  <!----------------Exercise 9b ----------->
+  <button class="js-second-btn" onclick="
+    let buttonText = document.querySelector('.js-second-btn');
+
+    if(buttonText.innerHTML === '9b') {
+      buttonText.innerHTML = '9b done!';
+
+    }else {
+      buttonText.innerHTML = '9b';
+    }
+  
+  ">9b</button>
+
+<p></p>
+
+
+<button class="head-button" onclick="
+  let headText = document.querySelector('.head-button');
+
+  if(headText.innerHTML === 'heads') {
+    document.querySelector('.result').innerHTML = `You chose: ${headText.innerHTML}`;
+  }
+
+">heads</button>
+
+
+<button class="tail-button" onclick="
+  let tailText = document.querySelector('.tail-button');
+
+  if(tailText.innerHTML === 'tails') {
+    document.querySelector('.result').innerHTML = `You chose: ${tailText.innerHTML}`;
+  }
+
+
+">tails</button>
+
+<p class="result"></p>
+
+
+
+<input type="text" class="js-text" placeholder="Name" onkeydown="
+  enteredName(event);
+">
+<button class="js-submit-button" onclick="
+  submitName();
+">Submit</button>
+
+<p class="js-display-name"></p>
+
+
+  <script>
+
+    // Exercise 9a
+    // console.log(document.querySelector('button'));
+
+    function submitName() {
+    let text = document.querySelector('.js-text');
+
+    let inputElement = text.value;
+
+    document.querySelector('.js-display-name').innerHTML = `Your name is: ${inputElement}`;
+
+    }
+
+    function enteredName(event){
+      if(event.key === 'Enter') {
+    submitName();
+
+    }
+    }
+
+    
+
+
+  </script>
+</body>
+</html>

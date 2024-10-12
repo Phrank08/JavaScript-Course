@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+  
+
+  <script>
+
+
+
+    const product = {
+      name: 'Shirt',
+      'delivery-time': '1-day',
+      rating: {
+        star: 4.5,
+        count: 87
+      },
+      fun: function myfunction() {
+        console.log('This is a function in an object');
+      }
+    }
+    // product.fun();
+    // console.log(product);
+
+
+    // ----------- JSON --------------
+
+    // console.log(JSON.stringify(product));
+
+    // const jsonString = JSON.stringify(product);
+    // console.log(JSON.parse(jsonString));
+
+
+    // ------------ localStorage ------------
+    // localStorage.setItem('product',jsonString);
+
+    // console.log('hello'.length);
+  
+    // console.log('hello'.toUpperCase());
+
+    // console.log(3.0.toString());
+
+
+    const object1 = {
+      message: 'hello',
+      pricing: 799
+    };
+
+    const object2 = object1;
+
+    // console.log(object2);
+
+    // OBJECTS CANNOT BE COMPARED DIRECTLY
+
+    const object3 = {
+      message: 'hello'
+    };
+
+    // console.log(object3 === object1);  // outputs false
+
+    // console.log(object2 === object1); // outputs true, cos they're pointing to the same reference.
+
+    // console.log(object3.message === object1.message); // outputs true
+
+
+
+    // const message = object3.message;
+      // SHORTHAND
+    
+       const {message} = object3;
+      // console.log(message);
+
+      // const {message,pricing} = object1;
+      // console.log(pricing);
+
+      /* const object4 = {
+        message: message
+      }
+      message
+      // console.log(object4);
+      // SHORTHAND
+
+      const object4 = {
+        message,
+        method: function function1 () {
+          console.log('Good Job!');
+        }
+      };
+
+      object4.method();
+  */
+      // SHORTHAND
+      const object4 = {
+        message,
+        method() {
+          console.log('Good Job!');
+        }
+      };
+
+      object4.method();
+
+  </script>
+</body>
+</html>

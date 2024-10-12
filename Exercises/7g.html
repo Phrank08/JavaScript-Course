@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+// EXERCISE 7G, 7H, 7I
+    function convertLength(length, from, to) {
+      if ((from !== 'miles' && from !== 'km') && (to !== 'km' && to !== 'miles' && to !== 'ft') ) {
+        let unit = from;
+        return(`Invalid unit: ${unit}`);
+
+      }else if (from === 'miles' && to === 'km') {
+        const calculatelength = (length * 1.6);
+        return(`${calculatelength} ${to}`);
+
+      }else if (from === 'km' && to === 'miles') {
+        const calculatelength = (length / 1.6);
+        return(`${calculatelength} ${to}`);
+
+      }else if (from === to) {
+        return(`${length} ${from}`)
+      }else if (from === 'miles' && to === 'ft') {
+        const calculatelength = (length * 5280);
+        return(`${calculatelength} ${to}`);
+
+      }else if (from === 'km' && to === 'ft') {
+        const calculatelength = (length * 3281);
+        return(`${calculatelength} ${to}`);
+      
+      }
+      
+    }
+/*
+    console.log(convertLength(50, 'miles', 'km'));
+    console.log(convertLength(32, 'km', 'miles'));
+    console.log(convertLength(50, 'km', 'km'));
+  */
+
+  console.log(convertLength(5, 'Ibs', 'Ibs'));
+  /*
+  console.log(convertLength(5, 'miles', 'ft'));
+  console.log(convertLength(5, 'km', 'ft'));
+*/
+
+  </script>
+</body>
+</html>

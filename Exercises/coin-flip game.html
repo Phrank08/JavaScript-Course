@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coin-flip game</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+
+
+    // Exercise 6f
+    const generatedNumber = Math.random();
+
+    // Exercise 6g & 6h
+    const result = generatedNumber < 0.5 ? 'heads' : 'tails';
+    console.log(result);
+
+    // Exercise 6i
+    const guess = 'heads';
+
+    // Exercise 6j
+    let matchedGuess = result === guess ? 'You win!' : 'You lose!';
+    console.log(matchedGuess); 
+  </script>
+</body>
+</html>

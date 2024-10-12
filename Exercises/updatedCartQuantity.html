@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Quantity</title>
+</head>
+<body>
+
+  <h2>Cart Quantity</h2>
+  
+  <button onclick="
+    if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  ">Show Quantity</button>
+
+  <button onclick="
+    cartQuantity++;
+    if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  ">Add to Cart</button>
+
+  <button onclick="
+    cartQuantity += 2;
+    if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  
+  ">+2</button>
+
+  <button onclick="
+    cartQuantity += 3;
+    if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  
+  ">+3</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  ">Reset Cart</button>
+
+<!-------Exercise 5h (cartExercise)-->
+  <button onclick="
+  cartQuantity += 4;
+  if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  ">+4</button>
+
+  <button onclick="
+  cartQuantity += 5;
+  if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else{
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+    }
+  ">+5</button>
+
+<!------Exercise 5i ------->
+  <button onclick="
+  cartQuantity--;
+  if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else if (cartQuantity < 0){
+      alert('Not enough items in the cart');
+    }
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+  ">Remove from Cart</button>
+
+<!--------Exercise 5j------>
+  <button onclick="
+  cartQuantity -= 2; // Exercise 5k
+  if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else if (cartQuantity < 0){
+      alert('Not enough items in the cart');
+    }
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+  ">-2</button>
+
+<button onclick="
+cartQuantity -= 3; // Exercise 5k
+if (cartQuantity > 10) {
+    alert('The Cart is full');
+    }else if ( cartQuantity < 0){
+      alert('Not enough items in the cart');
+    }
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+">-3</button>
+
+
+
+  <script>
+    let cartQuantity = 0;
+    /*
+    if (cartQuantity > 10){
+      alert('The Cart is full');
+      cartQuantity = 0;
+    }
+    var variableName = 'Frank';
+    console.log(typeof variableName);
+    */
+  </script>
+</body>
+
+</html>

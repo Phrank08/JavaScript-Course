@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Quantity</title>
+</head>
+<body>
+
+  <h2>Cart Quantity</h2>
+  
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Show Quantity</button>
+
+  <button onclick="
+    updateCartQuantity(1);
+  ">Add to Cart</button>
+
+  <button onclick="
+    updateCartQuantity(2);
+  ">+2</button>
+
+  <button onclick="
+    updateCartQuantity(3);
+  ">+3</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+
+
+  ">Reset Cart</button>
+
+
+  <button onclick="
+    updateCartQuantity(4);
+  ">+4</button>
+
+  <button onclick="
+    updateCartQuantity(5);
+
+  ">+5</button>
+
+
+  <button onclick="
+    updateCartQuantity(-1);
+
+  ">Remove from Cart</button>
+
+
+  <button onclick="
+    console.log(updateCartQuantity(-2));
+
+  ">-2</button>
+
+<button onclick="
+    console.log(updateCartQuantity(-3));
+
+">-3</button>
+
+
+
+  <script>
+    let cartQuantity = 0;
+
+
+
+    function updateCartQuantity(value) {
+    if (cartQuantity + value > 10) {
+      alert('The Cart is full');
+
+      // creates a popup the cart's quantity once the cart is pass 10
+      return 
+    }
+
+    if (cartQuantity + value < 0){
+      alert('Not enough items in the cart');
+
+      // creates a popup the cart's quantity once the cart is 0
+      return;
+    }
+
+    cartQuantity += value;
+
+    // displays cart's quantity on the console
+    console.log('Cart Quantity:'+ ' ' + cartQuantity);
+
+    }
+
+
+
+    
+    /*
+    if (cartQuantity > 10){
+      alert('The Cart is full');
+      cartQuantity = 0;
+    }
+    var variableName = 'Frank';
+    console.log(typeof variableName);
+    */
+  </script>
+</body>
+
+</html>

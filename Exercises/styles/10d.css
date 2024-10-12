@@ -1,0 +1,33 @@
+.gaming-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-family: Arial;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+  
+}
+
+.other-button, .tech-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 18px;
+  font-family: Arial;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.is-other-toggled, .is-tech-toggled {
+  background-color: rgb(230, 230, 230);
+  color: black;
+}
