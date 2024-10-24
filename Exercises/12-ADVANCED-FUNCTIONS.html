@@ -6,24 +6,76 @@
   <title>Advanced-functions</title>
 </head>
 <body>
-  <p id="p1">Hello world</p>
+  
 
   <script>
 
     
 
-
-  function greeting() {
+    /*
+  const function1 = function() {    // anonymous function
       console.log('hello2');
     }
 
     // console.log(function1);
     // console.log(typeof function1);
 
-    function1();
+    // function1();
 
+    const object1 = {
+      num : 2,
+      fun : function  (){   // a function saved inside an object is called a METHOD 
+        console.log('Hello World');
+      }
+    }
+
+
+    // object1.fun();
+
+    function display(param) {   // functions are values, anything you can do with a value, you can do wtih a function
+      console.log(param);
+    }
+ 
+      display(2);
+
+      function run(param) {
+        param();
+      }
+      run(function() {    // this is called passing a function into another function
+                          // run() is called the CALL-BACK function
+        console.log('Hello World');
+      })
+
+      */
+
+      /*
+      setTimeout(function() {   // this is a built in function in Js that runs a function in the future.
+                                // It takes two parameters (1) A function (2) A time in millisecond (1000ms === 1 second)
+        console.log('timeout');
+      }, 3000);
+
+      console.log('NextLine');
   
-  
+      setInterval(function() {    // same as setTimeout this runs a function in every specified time (millisecond).
+        console.log("Interval");
+      }, 3000);
+      */
+
+     const myArray = [
+      "make dinner",
+      "wash dishes",
+      "watch youtube"
+     ].forEach(function(value, index){
+        if(value === 'wash dishes') {
+          return;
+        }
+
+        console.log(`${index}. ${value}`);
+     })
+    
+    
+    
+
   </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12e</title>
+</head>
+<body>
+  <button class="cart-button" onclick="
+      addToCartBtn();
+    ">Add to cart</button>
+
+
+  <script>
+
+    // EXERCISE 12E 
+
+      
+    function addToCartBtn() {
+        let intervalId 
+        let isAdded = false;
+        let addToCartBtn = document.querySelector('.cart-button');
+        let displayAdded = document.querySelector('.display-added');
+
+        if(!isAdded) {
+          intervalId = setInterval(function(){
+            displayAdded.innerHTML = '';
+          
+          },2000);
+          displayAdded.innerHTML = 'Added';
+
+          // isAdded = true;
+        } // else {
+          // isAdded = false;
+        // }
+      }
+  </script>
+</body>
+</html>

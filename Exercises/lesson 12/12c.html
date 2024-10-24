@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12c</title>
+</head>
+<body>
+  
+
+  <script>
+
+     // EXERCISE 12C
+
+    
+     function finishedButton() {
+      let btn = document.querySelector('.finished-btn');
+      let innerValue = btn.innerHTML;
+
+      if(btn.innerHTML === 'Start') {
+        setTimeout(function () {
+          btn.innerHTML = 'Finished';
+          console.log(btn.innerHTML);
+        }, 1000);
+      }
+      
+    }
+  </script>
+</body>
+</html>

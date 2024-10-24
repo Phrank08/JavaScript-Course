@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12d/title>
+</head>
+<body>
+
+  <button class="finished-btn" onclick="
+     finishedButton();
+    ">Start</button>
+  <script>
+
+    
+    // EXERCISE 12D
+
+    function finishedButton() {
+      let btn = document.querySelector('.finished-btn');
+      let innerValue = btn.innerHTML;
+
+      if(btn.innerHTML === 'Start') {
+        setTimeout(function () {
+          btn.innerHTML = 'Finished';
+          // btn.innerHTML = 'Finished';
+          console.log(btn.innerHTML);
+        }, 2000);
+        btn.innerHTML = 'Loading...';
+      }
+    }
+
+  </script>
+</body>
+</html>
